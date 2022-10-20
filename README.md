@@ -26,6 +26,9 @@ Ultimately tracking of news by using stochastic models are also in use due to in
 3)	Topic selection
 4)	Topic Detection
 
+![Technology Architechture](https://user-images.githubusercontent.com/66555276/196895536-29e8fcca-a363-4fc9-b4ac-58fddd66b336.jpg)
+
+
 Real time updates can be obtained by everyone at anytime and anywhere in the area of interest without any hassle.
 
 # Hardware Requirements

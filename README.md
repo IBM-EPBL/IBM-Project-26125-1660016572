@@ -42,11 +42,11 @@ Real time updates can be obtained by everyone at anytime and anywhere in the are
 4.	Operating System(win 7+/ Linux/MaxOs)
 
 # IDE’s, Tools and Techniques used
-•	Python
-•	Flask
-•	LDA (latent Dirichlet allocation) 
-•	K- Means Clustering
-•	Gibbs Sampling 
+1.	Python
+2.	Flask
+3.	LDA (latent Dirichlet allocation) 
+4.	K- Means Clustering
+5. Gibbs Sampling 
 
 ![Solution Architecture_page-0001](https://user-images.githubusercontent.com/66555276/196893314-5cf3fcf2-4e17-497f-85eb-81cd0b2d01db.jpg)
 

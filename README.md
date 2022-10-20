@@ -13,7 +13,8 @@ The topic mining using the K-means method is compared to highlight the advantage
 
 One kind of a large network of online resources and interconnected people sharing their opinions and news circulating around is Twitter.  Breaking news that are posted, are categorized as groups, ranks and tracks. Instead of using a supervised ML model, the twitter messages are made into an intermediate value called as timeline to be tracked.
 
-![news](https://user-images.githubusercontent.com/66555276/196865867-9148d1a7-a96b-4c43-a135-84d721951862.jpg)
+
+![www (1)](https://user-images.githubusercontent.com/66555276/196894011-f2298420-5a48-4c96-9e4c-0f8b560ea8be.jpg)
 
 
 Clustering of the various messages, probable news with the format or structure, can be used to find the topic of relevance or interest by the people who need to view the news based on it. The improvement of the common agglomerative hierarchical clustering algorithm based on average-link method, which is used to implement the retrospective topic detection and the online topic detection of news stories of the stocks is implemented already as per the submitted paper. 
@@ -26,3 +27,30 @@ Ultimately tracking of news by using stochastic models are also in use due to in
 4)	Topic Detection
 
 Real time updates can be obtained by everyone at anytime and anywhere in the area of interest without any hassle.
+
+# Hardware Requirements
+1.	Laptop or PC
+2.	I3 processor system or higher
+3.	8 GB RAM or higher
+4.	100 GB ROM or higher
+5.	Processor: Intel i5 9th Gen
+
+# Software Requirements
+1.	Anaconda Prompt
+2.	Visual studio Code
+3.	Flask
+4.	Operating System(win 7+/ Linux/MaxOs)
+
+# IDE’s, Tools and Techniques used
+•	Python
+•	Flask
+•	LDA (latent Dirichlet allocation) 
+•	K- Means Clustering
+•	Gibbs Sampling 
+
+![Solution Architecture_page-0001](https://user-images.githubusercontent.com/66555276/196893314-5cf3fcf2-4e17-497f-85eb-81cd0b2d01db.jpg)
+
+# Conclusion
+
+One of the factors in successful news app development is visualization of news and its feature with user. For the development of an android app material design is very useful and provides smooth experience with custom layout, views and animations. Hence, the application of news tracker is a very essential use of news access from anywhere anytime.
+

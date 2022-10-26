@@ -1,7 +1,7 @@
 # IBM-Project-26125-1660016572
 News Tracker Application
 
-News tracking often never comes in handy as we have to access Google, and search for the relevant topics. Eventually some of them are fake and not the exact kind of news we look for. Tracking the news hence will help people to avoid boring, fake and helps in finding the desired news.
+News tracking often never comes in handy Has we have to access Google, and search for the relevant topics. Eventually some of them are fake and not the exact kind of news we look for. Tracking the news hence will help people to avoid boring, fake and helps in finding the desired news.
 
 
 ![README_img](https://user-images.githubusercontent.com/66555276/196865578-a3e182f9-b065-4d18-b6bf-bfc815a5130b.png)

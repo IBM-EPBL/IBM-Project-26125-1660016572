@@ -17,8 +17,9 @@ One kind of a large network of online resources and interconnected people sharin
 ![www (1)](https://user-images.githubusercontent.com/66555276/196894011-f2298420-5a48-4c96-9e4c-0f8b560ea8be.jpg)
 
 
+Clustering of the various messages, probable news with the format or structure, can be used to find the topic of relevance or interest by the people who need to view the news based on it. The improvement of the common agglomerative hierarchical clustering algorithm based on average-link method, which is used to implement the retrospective topic detection and the online topic detection of news stories of the stocks is implemented already as per the submitted paper. 
 
-
+Ultimately tracking of news by using stochastic models are also in use due to information occurring in fragments. These are formed by the story lines tracking in news channels and in documents. Using the Kullback–Leibler divergence, we can:
 1)	Identifying the same topics
 2)	Clustering the similar nodes
 3)	Topic selection

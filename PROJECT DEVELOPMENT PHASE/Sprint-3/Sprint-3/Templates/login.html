@@ -1,0 +1,126 @@
+<!Doctype HTML>
+
+<html>
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- stylesheet tags -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+  </head>
+
+  <body>
+    <!-- first section -->
+    <section id="firstSec">
+
+      <div class="container">
+
+        <!-- intro text -->
+        <div class="hello pt-4"> <b><h3 class="display-4 text-light"> Welcome to News uS<br>Enjoy The Latest News!</h3>
+        </b></div>
+        <!-- /intro text -->
+
+
+        <!-- /details card -->
+        <div class="offset-lg-2">
+          <div id="mainCard" class="card rounded">
+
+
+            <!-- card title -->
+            <div class="card-title text-center">
+
+
+              <!-- ALT <img class="userIcon " src="img/user.jpg" alt="cardImage"> -->
+              <div class="userIcon text-center"><i class="fa fa-user fa-fw fa-3x"></i></div>
+
+
+              <!-- buttons options -->
+                <div class="row pb-4">
+                  <div class="btn btn-light col-lg-6 col-md-6 col-sm-6 pt-2">
+                    <a href="#signIn" data-target="#signIn"> <h2 class="pt-2 pb-2 text-dark"> Sign In </h2> </a>
+                  </div>
+
+                  <div class="btn btn-dark col-lg-6 col-md-6 col-sm-6 pt-2">
+                    <a href="{{ url_for('registration') }}" data-target="registration.html"> <h2 class="pt-2 pb-2 text-light"> Create Account </h2> </a>
+                  </div>
+                </div>
+              <!-- /.buttons for options -->
+
+            </div>
+            <!-- /.card title -->
+
+            <!-- card body -->
+            <div class="card-body">
+
+              <!-- forms -->
+              <div id="signIn" class="container">
+                <div class="input-group input-group-md col-lg-9 col-lg-9 offset-lg-1 pl-5 ">
+                  <i class="fa fa-user fa-fw fa-3x"></i>
+                  <input name="username" type="username" class="form-control" id="userName" placeholder=" Username">
+                </div>
+
+                <div class="input-group input-group-md col-lg-9 offset-lg-1 pl-5 pt-3 pb-4">
+                  <i class="fa fa-lock fa-fw fa-3x"></i>
+                  <input name="password" type="username" class="form-control" id="password" placeholder=" Password">
+                </div>
+                <!-- /.forms -->
+
+
+                <!-- confirmation buttons -->
+                <div class="row input-group done pb-3 pt-3">
+
+                  <div class="lostPass mr-5">
+                    <a href="#"> Forgot password ? </a>
+                  </div>
+
+                  <div class="col-xs-5 offset-4 pt-2 pl-5 pt-4">
+                    <button class="btn btn-xs btn-outline-light" href="#"> LogIn </button>
+                  </div>
+
+                </div>
+                <!-- confirmation buttons  -->
+
+
+                <!-- checkBox -->
+                <div class="form-group pl-4">
+                  <input type="checkbox"> Remember me
+                </div>
+                <!-- /.checkBox -->
+
+              </div>
+              <!-- /.forms -->
+
+            </div>
+            <!-- /.cardBody -->
+
+
+          </div>
+          <!-- /.mainCard -->
+
+        </div> <!--/.details card div -->
+
+      </div> <!-- /container div -->
+
+    </section>
+    <!-- /.section -->
+
+
+    <!--beginning of JS Script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+    <script src="js/scroll-effect.js"></script>
+    <!--/JS Script-->
+
+  </body>
+</html>

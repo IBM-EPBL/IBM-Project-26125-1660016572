@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News application</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+<style>
+	body {
+	  margin: 0;
+	  background-image: url('../images/home.jpg');
+	}
+	.wrapper {
+	  display: flex;
+	  height: 20vh;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.button {
+	  border: 1px transparent;
+	  -webkit-border-radius: 40px;
+	  border-radius: 40px;
+	  color: #eeeeee;
+	  cursor: pointer;
+	  display: inline-block;
+	  font-family: Arial;
+	  font-size: 20px;
+	  padding: 8px 30px;
+	  text-align: center;
+	  text-decoration: none;
+	  margin-left: 20px;
+	  -webkit-animation: glowing 1300ms infinite;
+	  -moz-animation: glowing 1300ms infinite;
+	  -o-animation: glowing 1300ms infinite;
+	  animation: glowing 1300ms infinite;
+	}
+	@-webkit-keyframes glowing {
+	  0% {
+		background-color: #0091b2;
+		-webkit-box-shadow: 0 0 3px #0091b2;
+	  }
+	  50% {
+		background-color: #21c7ed;
+		-webkit-box-shadow: 0 0 15px #21c7ed;
+	  }
+	  100% {
+		background-color: #0091b2;
+		-webkit-box-shadow: 0 0 3px #0091b2;
+	  }
+	}
+	@keyframes glowing {
+	  0% {
+		background-color: #0091b2;
+		box-shadow: 0 0 3px #0091b2;
+	  }
+	  50% {
+		background-color: #21c7ed;
+		box-shadow: 0 0 15px #21c7ed;
+	  }
+	  100% {
+		background-color: #0091b2;
+		box-shadow: 0 0 3px #0091b2;
+	  }
+	}
+	.svg-btn {
+	  display: block;
+	  width: 230px;
+	  height: 230px;
+	  margin-left: 10px;
+	}
+	svg {
+	  fill: blue;
+	  -webkit-animation: glowing-polygon 1300ms infinite;
+	  -moz-animation: glowing-polygon 1300ms infinite;
+	  -o-animation: glowing-polygon 1300ms infinite;
+	  animation: glowing-polygon 1300ms infinite;
+	}
+	@-webkit-keyframes glowing-polygon {
+	  0% {
+		fill: #0091b2;
+		-webkit-filter: drop-shadow( 0 0 3px #0091b2);
+	  }
+	  50% {
+		fill: #21c7ed;
+		-webkit-filter: drop-shadow( 0 0 15px #21c7ed);
+	  }
+	  100% {
+		fill: #0091b2;
+		-webkit-filter: drop-shadow( 0 0 3px #0091b2);
+	  }
+	}
+	@keyframes glowingPolygon {
+	  0% {
+		fill: #0091b2;
+		filter: drop-shadow( 0 0 3px #0091b2);
+	  }
+	  50% {
+		fill: #21c7ed;
+		filter: drop-shadow( 0 0 15px #21c7ed);
+	  }
+	  100% {
+		fill: #0091b2;
+		filter: drop-shadow( 0 0 3px #0091b2);
+	  }
+	}
+  </style>
+</head>
+</head>
+<body>
+
+	<div class="outer-container">
+			<header>
+			  <div class="row align-items-end">
+				<div class="col date">
+				  <span>Tue, Nov 15, 2022</span>
+				</div>
+		
+				<div class="col img-logo">
+					<b><a href="{{ url_for('index1') }}"><h1 style="color: white;">NEW US</b></h1></a>
+				  </div>
+		</div>
+
+	<form action="/home" method="post">
+
+		<input type="text" class="form-control" name="keyword" placeholder="Enter keyword ...." aria-label="Recipient's username" aria-describedby="button-addon2">
+		<div class="wrapper">
+			<a class="button" href="{{ url_for('index1') }}">Go to NEW US!</a>
+		</div>
+	</form>
+	</div>
+	{% if all_headlines %}
+	<marquee width="100% " direction="left" height="100px">
+	<center><h1 style="font-size: 50px; font-style: italic; color: crimson;"> HEADLINES From NewsApp! Get the Latest news here on NEW US </h1></center></marquee>
+	<div class="row row-cols-1 row-cols-md-2 g-4 mx-3 my-3">
+		{% for headline in all_headlines %}
+		<div class="col">
+			<div class="card h-100">
+			<img src="{{headline['urlToImage']}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h3 class="card-title">{{headline['title']}}</h3>
+				<p class="card-text">{{headline['description']}} <a href="{{headline['url']}}" target="blank">Read More...</a></p>
+
+
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">{{headline['source']['name']}}</small>
+			</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	{% if all_articles %}
+	<center><h1>Results for '{{keyword}}'</h1></center>
+	<div class="row row-cols-1 row-cols-md-2 g-4 mx-3 my-3">
+		{% for article in all_articles %}
+		<div class="col">
+			<div class="card h-100">
+			<img src="{{article['urlToImage']}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h3 class="card-title">{{article['title']}}</h3>
+				<p class="card-text">{{article['description']}} <a href="{{article['url']}}" target="blank">Read More...</a></p>
+
+
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">{{article['source']['name']}}</small>
+			</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Nav">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">News Tracker Application</a>
+                
+              </div>
+              <div class="collapse navbar-collapse" id="Nav">
+                <ul class="nav  navbar-nav navbar-right ">
+                
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#"> subscription</a></li>
+                  <li><a href="/signin">sign in</a></li>
+                  <a id="signup" href="/signup" class="btn navbar-btn">Signup</a>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div  id="text">
+            <h1>24/7 News,Top Articles,Authorized Source</h1>
+            <h1>Available inside here....</h1>
+            <h4>News tracking often never comes in handy as we have to access Google, and search for the relevant topics.
+                Eventually some of them are fake and not the exact kind of news we look for. 
+                Tracking the news hence will help people to avoid boring, fake and helps in finding the desired news.
+            </h4>
+            <a  href="#" id="start">Read Now</a>
+            </div>
+            </div>
+            <div class=" img img-responsive col-lg-6 col-md-6 col-sm-12 col-xm-12"><br><br> 
+              <img src="https://img.freepik.com/free-vector/businessman-drink-coffee-cafe-during-work-break-company-employee-character-sitting-table-reading-daily-newspaper-enjoying-hot-aroma-beverage-relaxation-refreshment_575670-1292.jpg?w=826&t=st=1668838912~exp=1668839512~hmac=5326dbd3595e66c48eb98821a372b834a686fdf3c5760900b5cbe0324cd5d702" alt="no rain img" class="img-fluid align-content-center" height="70%" width="70%">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

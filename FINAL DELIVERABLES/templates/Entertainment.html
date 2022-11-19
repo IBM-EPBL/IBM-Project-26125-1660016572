@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{url_for('static', filename='images/icons/NEWUS.png')}}" type="image/png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <title>NEWUS - News, Analysis, Politics, Business, Technology</title>
+</head>
+<body>
+  
+  <div class="outer-container">
+    <header>
+      <div class="row align-items-end">
+        <div class="col date">
+          <span>Tue, Nov 15, 2022</span>
+        </div>
+
+        <div class="col img-logo">
+            <a href="{{ url_for('index1') }}"><h1 style="color: white;"><b><center>NEW US</center></b></h1></a>
+          </div>
+
+        
+          <nav>
+            <ul class="nav d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('World') }}">World</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('India') }}">India</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('Business') }}">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('TechScience') }}">Tech & Science</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('Cricket') }}">Cricket</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('Sports') }}">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('Entertainment') }}">Entertainment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('Health') }}">Health</a>
+              </li>
+              
+              <li class="nav-item">
+                <span>Search</span>                
+                <a href="{{ url_for('searchlist') }}">
+                  <img src="{{url_for('static', filename='images/icons/NEWUS.png')}}" alt="" style="width:42px;height:42px;">
+                  </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+  
+    </header>
+    <hr>
+            <h2 class="category-title"><a href="#" style="color: #49b4e6;">Entertainment</a></h2>
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <img src="{{url_for('static', filename='images/thumbs/maheshfather.webp')}}" alt="" width="400" height="300">
+                <div class="headline"><a href="#">Veteran actor Krishna, father of Mahesh Babu, passes away</a></div>
+              </div>
+              <div class="col-12 col-md-4">
+                <img src="{{url_for('static', filename='images/thumbs/stranerthings.webp')}}" alt="" width="400" height="300">
+                <div class="headline"><a href="#">David Harbour Says He Is Happy 'Stranger Things' Is Ending: Here's Why</a></div>
+              </div>
+              <div class="col-12 col-md-4">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <img src="{{url_for('static', filename='images/thumbs/grayman.webp')}}" class="float-left list-img" alt="">
+                    <a href="#">'The Gray Man’ Review: Chris Evans-Ryan's Film Spares No Expense, But Feels Oddly Gray</a>
+                  </li>
+                  <li class="list-group-item">
+                    <img src="{{url_for('static', filename='images/thumbs/dilmangemore.webp')}}" class="float-left list-img" alt="">
+                    <a href="#">Army To Organise Short Film Festival 'Dil Maange More' For J-K, Ladakh Filmmakers</a>
+                  </li>
+                  <li class="list-group-item">
+                    <img src="{{url_for('static', filename='images/thumbs/abishek.webp')}}" class="float-left list-img" alt="">
+                    <a href="#">Abhishek Bachchan: If the writing is good, half your work is done</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assests/images/icons/NEWUS.png" type="image/png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <title>NEWUS - News, Analysis, Politics, Business, Technology</title>
+</head>
+<body>
+  
+  <div class="outer-container">
+    <header>
+      <div class="row align-items-end">
+        <div class="col date">          
+          <span>Tue, Nov 15, 2022</span>
+        </div>
+
+        
+        <div class="col img-logo">
+          <a href="index1.html"><h1 style="color: white;"><b><center>NEW US</center></b></h1></a>
+        </div>
+
+      </div>
+      <nav>
+        <ul class="nav d-flex">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('World') }}">World</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('India') }}">India</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('Business') }}">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('TechScience') }}">Tech & Science</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('Cricket') }}">Cricket</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('Sports') }}">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('Entertainment') }}">Entertainment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('Health') }}">Health</a>
+          </li>
+          
+          <li class="nav-item">
+            <span>Search</span>                
+            <a href="{{ url_for('searchlist') }}">
+              <img src="{{url_for('static', filename='images/icons/search.png')}}" alt="" style="width:42px;height:42px;">
+              </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family:  "Arial Narrow";
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  font-family:  "Arial Narrow";
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #49b4e6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #62c4af;
+}
+</style>
+</head>
+<body>
+
+<h2>Search</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="{{ url_for('World') }}">World</a></li>
+  <li><a href="{{ url_for('India') }}">India</a></li>
+  <li><a href="{{ url_for('Business') }}">Business</a></li>
+  <li><a href="{{ url_for('TechScience') }}">Tech & Science</a></li>
+  <li><a href="{{ url_for('Cricket') }}">Cricket</a></li>
+  <li><a href="{{ url_for('Sports') }}">Sports</a></li>
+  <li><a href="{{ url_for('Entertainment') }}">Entertainment</a></li>
+  <li><a href="{{ url_for('Health') }}">Health</a></li>  
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
